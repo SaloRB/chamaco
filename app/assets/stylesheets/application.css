@@ -14,20 +14,3 @@
  *= require_self
  */
 
-h1, h2, h3 {
-	margin: 0;
-	padding: 0;
-	/*text-transform: uppercase;*/
-	font-family: 'Abel', sans-serif;
-	font-weight: normal;
-	color: #0087E2;
-}
-
-a {
-	color: #D93544;
-	text-decoration: none;
-	height: 41px;
-	padding: 0px 0px 0px 0px;
-	letter-spacing: -1px;
-	font-family: 'Abel', sans-serif;
-}

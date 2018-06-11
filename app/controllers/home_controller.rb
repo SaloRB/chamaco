@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
 	def index
-		@message = "Bienvenido"
+		@users = User.all
 	end
 end

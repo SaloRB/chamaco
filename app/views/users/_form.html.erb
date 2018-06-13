@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
+  <div class="field padding">
+    <%= form.label "Name:" %>
     <%= form.text_field :name, id: :user_name %>
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
+  <div class="field padding">
+    <%= form.label "Email:" %>
     <%= form.text_field :email, id: :user_email %>
   </div>
 
-  <div class="actions">
+  <div class="actions padding">
     <%= form.submit %>
   </div>
 <% end %>

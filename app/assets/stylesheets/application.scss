@@ -4,4 +4,8 @@ $theme-colors: (
 	"secondary": #0C2340
 );
 
+.padding {
+  padding-bottom: 2rem;
+}
+
 @import "bootstrap";

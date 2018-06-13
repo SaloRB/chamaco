@@ -2,20 +2,14 @@
   <head>
     <title>Chamaco</title>
     <%= csrf_meta_tags %>
+    <%= favicon_link_tag "favicon.ico" %>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
   </head>
   <body>
-    <div class="container">
-      <%= render "partials/navbar" %>
-      <div class="row">
-        <div class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
-          <%= render "partials/sidebar" %>
-        </div>
-        <div class="col-sm">
-          <%= yield %>
-        </div>
-      </div>
-  	</div>
+    <%= render "partials/navbar" %>
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
   </body>
 </html>

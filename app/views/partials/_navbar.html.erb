@@ -16,6 +16,8 @@
                 <% @users.each do |user| %>
                   <%= link_to user.name, user, class: "dropdown-item" %>
                 <% end %>
+                <div class="dropdown-divider"></div>
+                <%= link_to "New User", new_user_path ,class: "dropdown-item" %>
               </div>
             </li>
             <li class="nav-item">

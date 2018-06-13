@@ -27,6 +27,7 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
+    @users = User.all
     @user = User.new(user_params)
 
     respond_to do |format|
@@ -43,6 +44,8 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
+    @users = User.all
+
     respond_to do |format|
       if @user.update(user_params)
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
@@ -59,7 +62,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      format.html { redirect_to users_url, notice: 'User was successfully removed.' }
       format.json { head :no_content }
     end
   end

@@ -1,3 +1,5 @@
+<% provide(:user_active, 'active') %>
+
 <p class="text-success" id="notice"><%= notice %></p>
 
 <h1 class="display-4">Users</h1>
@@ -16,19 +18,22 @@
       <tr>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', user, class: "btn btn-sm btn-secondary" %></td>
+        <td><%= link_to 'Edit', edit_user_path(user), class: "btn btn-sm btn-secondary" %></td>
+        <td><%= link_to 'Remove', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger" %></td>
       </tr>
+    <% end %>
+
+    <% @users.each do |user| %>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'New User', new_user_path, class: "btn btn-sm btn-secondary" %>
 
 <br>
 <br>
 
-<%= link_to 'Back', root_path %>
+<%= link_to 'Back', root_path, class: "btn btn-sm btn-secondary" %>

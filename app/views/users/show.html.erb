@@ -1,5 +1,11 @@
+<% provide(:user_active, 'active') %>
+
 <div class="text-secondary">
-	<p class="text-success" id="notice"><%= notice %></p>
+	<br>
+	<% if notice %>
+		<p class="text-success" id="notice"><%= notice %></p>
+		<hr>
+	<% end %>
 
 	<p>
 	  <strong>Name:</strong>
@@ -11,6 +17,12 @@
 	  <%= @user.email %>
 	</p>
 
-	<%= link_to 'Edit', edit_user_path(@user) %> |
-	<%= link_to 'Back', users_path %>
+	<br>
+
+	<%= link_to 'Edit', edit_user_path(@user), class: "btn btn-sm btn-secondary" %>
+
+	<br>
+	<br>
+
+	<%= link_to 'Back', users_path, class: "btn btn-sm btn-secondary" %>
 </div>

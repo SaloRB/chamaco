@@ -1,8 +1,14 @@
-<div class="text-secondary">
-<h1 class="padding">Editing User</h1>
+<% provide(:user_active, 'active') %>
+<% provide(:page_title, 'Edit User') %>
 
+<div class="text-secondary">
+<br>
 <%= render 'form', user: @user %>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Show', @user, class: "btn btn-sm btn-secondary" %>
+
+<br>
+<br>
+
+<%= link_to 'Back', users_path, class: "btn btn-sm btn-secondary" %>
 </div>

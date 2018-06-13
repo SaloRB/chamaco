@@ -1,4 +1,4 @@
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
         <%= link_to "Chamaco", root_path, class: "navbar-brand" %>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
@@ -8,10 +8,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <%= link_to "Home", root_path, class: "nav-link" %>
+              <%= link_to "Home", root_path, class: "nav-link #{yield(:home_active)}" %>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Users</a>
+              <%= link_to "Users", '#', { class: "nav-link dropdown-toggle #{yield(:user_active)}", id: "navbarDropdown", "role" => "button", "data-toggle" => "dropdown" } %>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <% @users.each do |user| %>
                   <%= link_to user.name, user, class: "dropdown-item" %>
@@ -21,10 +21,10 @@
               </div>
             </li>
             <li class="nav-item">
-              <%= link_to "About", about_path, class: "nav-link" %>
+              <%= link_to "About", about_path, class: "nav-link #{yield(:about_active)}" %>
             </li>
             <li class="nav-item">
-              <%= link_to "Contact", contact_path, class: "nav-link" %>
+              <%= link_to "Contact", contact_path, class: "nav-link #{yield(:contact_active)}" %>
             </li>
           </ul>
         </div>

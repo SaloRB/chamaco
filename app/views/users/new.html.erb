@@ -1,7 +1,9 @@
-<div class="text-secondary">
-<h1 class="padding">New User</h1>
+<% provide(:user_active, 'active') %>
+<% provide(:page_title, 'New User') %>
 
+<div class="text-secondary">
+<br>
 <%= render 'form', user: @user %>
 
-<%= link_to 'Back', users_path %>
+<%= link_to 'Back', users_path, class: "btn btn-sm btn-secondary" %>
 </div>

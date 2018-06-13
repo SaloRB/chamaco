@@ -21,3 +21,7 @@
 /yarn-error.log
 
 .byebug_history
+
+#Ignore project files
+chamaco.sublime-project
+chamaco.sublime-workspace

@@ -1,9 +1,9 @@
 class PagesController < ApplicationController
   def about
-  	@users = User.all
+  	user_list
   end
 
   def contact
-  	@users = User.all
+  	user_list
   end
 end

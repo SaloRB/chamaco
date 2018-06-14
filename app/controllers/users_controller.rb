@@ -4,30 +4,30 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    user_list
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
-    @users = User.all
+    user_list
   end
 
   # GET /users/new
   def new
-    @users = User.all
+    user_list
     @user = User.new
   end
 
   # GET /users/1/edit
   def edit
-    @users = User.all
+    user_list
   end
 
   # POST /users
   # POST /users.json
   def create
-    @users = User.all
+    user_list
     @user = User.new(user_params)
 
     respond_to do |format|
@@ -44,7 +44,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
-    @users = User.all
+    user_list
 
     respond_to do |format|
       if @user.update(user_params)
